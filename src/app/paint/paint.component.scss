@@ -1,0 +1,24 @@
+#square-container {
+  overflow: hidden;
+  max-height: 100vh;
+  display: grid;
+  grid-template-columns:repeat(100,1fr);
+}
+
+#square {
+  border: 1px solid;
+  aspect-ratio:1/1;
+}
+
+.context-menu {
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  background: white;
+  border: 1px solid black;
+  div {
+    min-width: 5vw;
+    min-height: 5vw;
+    margin: 5px;
+  }
+}

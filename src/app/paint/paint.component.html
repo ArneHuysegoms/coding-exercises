@@ -1,0 +1,11 @@
+<div id="square-container">
+  <div id="square" (click)="toggleBackground($event)"></div>
+  <div id="contextMenu" class="context-menu"
+       style="display: none">
+    <div style="background-color: magenta" (click)="changeDefaultColor('magenta')"></div>
+    <div style="background-color: red" (click)="changeDefaultColor('red')"></div>
+    <div style="background-color: blue" (click)="changeDefaultColor('blue')"></div>
+    <div style="background-color: yellow" (click)="changeDefaultColor('yellow')"></div>
+    <div style="background-color: cyan" (click)="changeDefaultColor('cyan')"></div>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ColorService} from "./color.service";
+import {ColorService} from "./services/color.service";
 
 @Component({
   selector: 'app-paint',

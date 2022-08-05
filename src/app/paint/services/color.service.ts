@@ -5,12 +5,12 @@ import {Injectable} from '@angular/core';
 })
 export class ColorService {
 
-  static defaultColor: string = "red";
+  defaultColor: string = "red";
 
   constructor() {
   }
 
-  static changeDefaultColor(color: string): void {
-    ColorService.defaultColor = color;
+  public changeDefaultColor(color: string): void {
+    this.defaultColor = color;
   }
 }

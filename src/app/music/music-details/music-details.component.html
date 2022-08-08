@@ -1,0 +1,11 @@
+<button (click)="back()" style="margin-bottom: 8px">Back</button>
+<div *ngIf="music">
+  <img src="{{music.artworkUrl100}}">
+  <div style="font-weight: bold;">
+    {{music.artistName}} - {{music.trackCensoredName}}
+  </div>
+  <div>Preview</div>
+  <div>
+    <audio src="{{music.previewUrl}}" controls></audio>
+  </div>
+</div>

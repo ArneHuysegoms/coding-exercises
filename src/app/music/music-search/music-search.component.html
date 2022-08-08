@@ -1,0 +1,10 @@
+<input type="text" class="form-control searchInput" (input)="onSearchChange($event)">
+
+<div *ngFor="let result of searchResults$">
+  <div class="searchResult">
+    <div><img src="{{result.artworkUrl100}}"></div>
+    <div>{{result.artistName}}</div>
+    <div>{{result.trackName}}</div>
+    <div (click)="toDetails(result.trackId)" style="cursor: pointer"><p style="color:blue">Details</p></div>
+  </div>
+</div>

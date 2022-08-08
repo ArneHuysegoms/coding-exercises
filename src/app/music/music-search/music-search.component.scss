@@ -1,0 +1,31 @@
+
+.searchResult {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-start;
+
+  div {
+    padding: 8px;
+    min-width: 15vw;
+    max-width: 15vw;
+    border: 2px solid black;
+  }
+
+  div:first-child {
+    min-width: unset;
+    padding: 8px;
+    border: 2px solid black;
+  }
+
+  div:last-child {
+    min-width: unset;
+    padding: 8px;
+    border: 2px solid black;
+  }
+}
+
+.searchInput {
+  margin-bottom: 8px
+}

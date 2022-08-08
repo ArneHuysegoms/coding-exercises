@@ -12,14 +12,26 @@ import {ITunesSearch} from "../domain/ITunesSearch";
 export class MusicSearchComponent {
 
   searchResults$: ITunesObject[] = []
+  loading : boolean = false
+  emptySearch : boolean = true
 
   constructor(private spotifyApiService: ITunesApiService, private readonly router: Router) {
   }
 
   onSearchChange(event: any): void {
-    this.spotifyApiService.getSearchResults(event.target.value).subscribe((search: ITunesSearch) => {
-      this.searchResults$ = search.results
-    })
+    this.loading = true
+    if (event.target.value === '') {
+      this.emptySearch = true
+    } else {
+      this.emptySearch = false
+    }
+    this.spotifyApiService.getSearchResults(event.target.value).subscribe(
+      {
+        next: (search: ITunesSearch) => {
+          this.searchResults$ = search.results
+        },
+        complete: () => this.loading = false
+      })
   }
 
   toDetails(id: number) {

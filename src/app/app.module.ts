@@ -11,7 +11,7 @@ import { MusicDetailsComponent } from './music/music-details/music-details.compo
 const routes: Routes = [
   { path: 'paint', component: PaintComponent },
   { path: 'music', loadChildren: () => import("./music/music.module").then(m => m.MusicModule), },
-  { path: '**', redirectTo: '/music' }
+  { path: '**', redirectTo: 'music' }
 ];
 
 @NgModule({

@@ -1,5 +1,5 @@
 <input type="text" class="form-control searchInput" (input)="onSearchChange($event)">
-
+<div *ngIf="!loading && emptySearch; else loadingTemplate">Please type in a filter...</div>
 <div *ngFor="let result of searchResults$">
   <div class="searchResult">
     <div><img src="{{result.artworkUrl100}}"></div>
@@ -8,3 +8,7 @@
     <div (click)="toDetails(result.trackId)" style="cursor: pointer"><p style="color:blue">Details</p></div>
   </div>
 </div>
+
+<ng-template #loadingTemplate>
+  <div *ngIf="loading">Searching...</div>
+</ng-template>
